@@ -12,11 +12,12 @@ module.exports = {
         'dark-bg': '#212428',         // Dark background for sections
         'light-bg': '#F5F5F5',        // Light background for content areas
         'dark-text': '#333333',       // Dark text color for light backgrounds
-        'light-text': '#878e99',      // Light text color for dark backgrounds
+        'light-text': '#c4cfde',      // Light text color for dark backgrounds
         'primary-red': '#ff014f',     // Primary button and accent color
         'hover-red': '#C53030',       // Hover state for primary red buttons
         'navbar-text': '#FFFFFF',     // Navbar text color
-        'hover-navbar': '#E2E8F0'     // Hover state for navbar text
+        'hover-navbar': '#E2E8F0',     // Hover state for navbar text
+        'body': '#878E96'
       }
     },
     fontFamily: {

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <div className='bg-dark-bg'>
+        <div className='flex items-center justify-center bg-dark-bg'>
             
         </div>
     );
