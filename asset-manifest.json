@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.1da5b71d.css",
-    "main.js": "/Portfolio/static/js/main.43572e64.js",
+    "main.css": "/Portfolio/static/css/main.12126264.css",
+    "main.js": "/Portfolio/static/js/main.5e37cba8.js",
     "static/media/light-logo.png": "/Portfolio/static/media/light-logo.a62a72b47cdef2e20301.png",
     "index.html": "/Portfolio/index.html",
-    "main.1da5b71d.css.map": "/Portfolio/static/css/main.1da5b71d.css.map",
-    "main.43572e64.js.map": "/Portfolio/static/js/main.43572e64.js.map"
+    "main.12126264.css.map": "/Portfolio/static/css/main.12126264.css.map",
+    "main.5e37cba8.js.map": "/Portfolio/static/js/main.5e37cba8.js.map"
   },
   "entrypoints": [
-    "static/css/main.1da5b71d.css",
-    "static/js/main.43572e64.js"
+    "static/css/main.12126264.css",
+    "static/js/main.5e37cba8.js"
   ]
 }
