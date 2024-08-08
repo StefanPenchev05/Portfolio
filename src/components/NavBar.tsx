@@ -41,6 +41,7 @@ const NavBar: React.FC = () => {
   const [activeLink, setActiveLink] = useState<string>("home");
 
   const handleLinkClick = (link: string) => {
+    setIsMenuOpen(false);
     setActiveLink(link);
   };
 
@@ -52,7 +53,7 @@ const NavBar: React.FC = () => {
   );
 
   return (
-    <nav className="flex justify-between items-center border-b-2 px-8 py-4">
+    <nav className="flex justify-between items-center px-8 py-4">
       <div className="flex items-center space-x-4">
         <Avatar avatar={lightLogo} className="ml-4" />
         <NameHeader />
