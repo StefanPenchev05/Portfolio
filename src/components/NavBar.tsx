@@ -14,7 +14,7 @@ import IconButton from "./IconButton";
 
 const tittleAndLinks = [
   { title: "I am", link: "home" },
-  { title: "My Experience", link: "my-experience" },
+  { title: "Features", link: "features" },
   { title: "Education", link: "education" },
   { title: "Resume", link: "resume" },
   { title: "Portfolio", link: "portfolio" },

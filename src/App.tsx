@@ -1,7 +1,7 @@
 import { Element } from "react-scroll";
 import NavBar from "./components/NavBar";
 import Home from "./sections/Home";
-import MyExperience from "./sections/MyExperience";
+import Features from "./sections/Features";
 import "./index.css";
 
 function App() {
@@ -13,9 +13,9 @@ function App() {
         <Home />
       </div>
     </Element>
-    <Element name="my-experience">
+    <Element name="features">
       <div className="mb-8">
-        <MyExperience />
+        <Features />
       </div>
     </Element>
   </div>
