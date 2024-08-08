@@ -53,7 +53,7 @@ const NavBar: React.FC = () => {
   );
 
   return (
-    <nav className="flex fixed w-full bg-dark-bg bg-opacity-70 top-0 z-50 justify-between items-center px-8 py-4">
+    <nav className="flex fixed w-full bg-dark-bg bg-opacity-90 top-0 z-50 justify-between items-center px-8 py-4">
       <div className="flex items-center space-x-4">
         <Avatar avatar={lightLogo} className="ml-4" />
         <NameHeader />
