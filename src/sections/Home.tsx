@@ -10,7 +10,7 @@ import {
   TbBrandRust,
 } from "react-icons/tb";
 
-import HomeAvatar from "../assets/home-logo.png"
+import HomeAvatar from "../assets/home-logo.png";
 import Divider from "../components/Divider";
 
 const contactSocialMediaLinks = [
@@ -147,12 +147,12 @@ const Home = () => {
           </div>
           <div className="flex items-center justify-center xl:w-1/3 w-full">
             <IconButton isButton={false}>
-                <img src={HomeAvatar} alt="Avatar" />
+              <img src={HomeAvatar} alt="Avatar" />
             </IconButton>
           </div>
         </div>
       </div>
-      <Divider className="mt-32 px-24" borderColor="border-black"/>
+      <Divider className="mt-28 xl:px-36 px-0" borderColor="border-black" />
     </section>
   );
 };
