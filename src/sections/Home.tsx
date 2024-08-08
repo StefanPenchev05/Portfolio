@@ -9,7 +9,8 @@ import {
   TbBrandMongodb,
   TbBrandRust,
 } from "react-icons/tb";
-import Button from "../components/Button";
+
+import HomeAvatar from "../assets/home-logo.png"
 
 const contactSocialMediaLinks = [
   {
@@ -34,10 +35,10 @@ const bestSkillOn = [
     component: <TbBrandNodejs className="text-green-600 w-1/2 h-1/2" />,
   },
   {
-    component: <TbBrandMongodb className="text-green-600 w-1/2 h-1/2" />,
+    component: <TbBrandRust className="text-red-600 w-1/2 h-1/2" />,
   },
   {
-    component: <TbBrandRust className="text-red-600 w-1/2 h-1/2" />,
+    component: <TbBrandMongodb className="text-green-600 w-1/2 h-1/2" />,
   },
 ];
 
@@ -74,19 +75,19 @@ const Home = () => {
   return (
     <section className="bg-dark-bg pt-6 py-16">
       <div className="flex items-center justify-center w-full">
-        <div className="flex flex-row items-center justify-between w-4/5">
-          <div className="px-2 w-1/2 space-y-24">
-            <div className="space-y-12 font-secondarys text-light-text">
-              <div className="space-y-">
-                <p className="uppercase font-thin text-sm leading-relaxed tracking-widest">
+        <div className="flex xl:space-y-0 xl:flex-row flex-col-reverse items-center justify-between w-4/5">
+          <div className="xl:px-2 px-0 xl:w-1/2 w-full space-y-24 xl:mt-0 mt-8">
+            <div className="space-y-12 text-light-text">
+              <div className="space-y-8 font-secondary">
+                <p className="uppercase font-thin text-sm max-xl:text-center leading-relaxed tracking-widest">
                   Welcome to my professional portfolio
                 </p>
-                <div className="text-pretty text-5xl text-light-bg leading-b1 h-fit">
+                <div className="text-pretty text-2xl md:text-4xl xl:text-5xl text-light-bg leading-b1 h-fit">
                   <b>
                     Hello, I’m{" "}
                     <span className="text-primary-red">Stefan Penchev</span>
                   </b>
-                  <div className="box-border text-5xl tracking-widest">
+                  <div className="box-border text-xl md:text-4xl xl:text-5xl tracking-widest">
                     <b>a </b>
                     <b className="animate-blink-caret border-r-2">
                       {displayedText}
@@ -94,7 +95,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <p className="text-wrap text-base leading-relaxed">
+              <p className="text-wrap text-base leading-relaxed font-primary">
                 I am a <span className="font-bold">19-year-old programmer</span>{" "}
                 with{" "}
                 <span className="font-bold">eight years of experience</span>.
@@ -114,7 +115,7 @@ const Home = () => {
                 </span>
               </p>
             </div>
-            <div className="flex">
+            <div className="flex flex-col space-y-6 xl:flex-row xl:space-y-0">
               <div className="flex flex-col space-y-4 w-full">
                 <p className="uppercase text-sm text-light-text">
                   Find with me
@@ -143,7 +144,11 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="w-1/2"></div>
+          <div className="flex items-center justify-center xl:w-1/3 w-full">
+            <IconButton isButton={false}>
+                <img src={HomeAvatar} alt="Avatar" />
+            </IconButton>
+          </div>
         </div>
       </div>
     </section>
