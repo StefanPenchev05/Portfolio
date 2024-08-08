@@ -11,6 +11,7 @@ import {
 } from "react-icons/tb";
 
 import HomeAvatar from "../assets/home-logo.png"
+import Divider from "../components/Divider";
 
 const contactSocialMediaLinks = [
   {
@@ -151,6 +152,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Divider className="mt-32 px-24" borderColor="border-black"/>
     </section>
   );
 };
