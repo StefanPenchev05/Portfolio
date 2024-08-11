@@ -6,10 +6,12 @@ import {
   HiOutlineMicrophone,
   HiOutlineBookmark,
   HiOutlinePuzzlePiece,
-  HiOutlineCloud
+  HiOutlineCloud,
 } from "react-icons/hi2";
 
 import { GiGearStickPattern } from "react-icons/gi";
+import MainLayout from "../components/MainLayout";
+import Divider from "../components/Divider";
 
 const features = [
   {
@@ -46,31 +48,30 @@ const features = [
     icon: <HiOutlineCloud className="text-red-600 w-16 h-16" />,
     title: "Data Management",
     description:
-      "Proficient in handling complex data structures and databases, ensuring robust data integrity and security in software applications."
+      "Proficient in handling complex data structures and databases, ensuring robust data integrity and security in software applications.",
   },
 ];
 
 const Features = () => {
   return (
-    <section className="bg-dark-bg pt-6 py-16">
-      <div className="flex items-center justify-center w-full">
-        <div className="w-4/5 space-y-12">
-          <div className="text-pretty font-secondary">
-            <p className="uppercase text-primary-red">Features</p>
-            <b className="text-5xl text-light-text">What I Do</b>
-          </div>
-          <div className="flex flex-wrap">
-            {features.map((el, index) => (
-              <FeatureCard
-                icon={el.icon}
-                title={el.title}
-                description={el.description}
-              />
-            ))}
-          </div>
+    <MainLayout>
+      <div className="w-4/5 space-y-12">
+        <div className="text-center text-pretty font-secondar w-full">
+          <p className="uppercase text-primary-red mb-4">Features</p>
+          <b className="text-5xl text-light-text">What I Do</b>
         </div>
+        <div className="flex flex-wrap">
+          {features.map((el, index) => (
+            <FeatureCard
+              icon={el.icon}
+              title={el.title}
+              description={el.description}
+            />
+          ))}
+        </div>
+        <Divider borderColor="border-black" />
       </div>
-    </section>
+    </MainLayout>
   );
 };
 
