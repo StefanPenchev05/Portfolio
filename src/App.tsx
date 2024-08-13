@@ -4,6 +4,7 @@ import Home from "./sections/Home";
 import Features from "./sections/Features";
 import "./index.css";
 import Education from "./sections/Education";
+import Resume from "./sections/Resume";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
     </Element>
     <Element name="education">
       <Education/>
+    </Element>
+    <Element name="resume">
+      <Resume/>
     </Element>
   </div>
   );

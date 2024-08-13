@@ -6,6 +6,9 @@ interface ButtonProps {
   className?: string;
   onClick?: () => void;
   roundedFull?: boolean;
+  isActiveColor?:boolean;
+  fullWidth?: boolean;
+  upperCase?:boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -13,9 +16,16 @@ const Button: React.FC<ButtonProps> = ({
   className = "",
   onClick,
   roundedFull = false,
+  isActiveColor = true,
+  fullWidth = false,
+  upperCase = true
 }) => {
   const baseClasses =
-    "uppercase text-primary-red bg-gradient-to-b bg-transparent from-[#1e2024] to-[#23272b] shadow-button transition-all z-10 text-sm font-medium border-0";
+    `${upperCase ? "uppercase" : ""} ${isActiveColor ? "text-primary-red" : "text-light-text"} bg-gradient-to-b
+    bg-transparent from-[#1e2024] to-[#23272b] 
+    shadow-button transition-all z-10 
+    text-sm font-medium border-0
+    ${fullWidth ? "w-full" : "w-fit"}`;
 
   const roundedClasses = roundedFull
     ? "rounded-full w-12 h-12 flex flex-col items-center justify-center"
