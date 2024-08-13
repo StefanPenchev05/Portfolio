@@ -36,7 +36,7 @@ interface TabHeadersProps {
 }
 
 const TabHeaders: FC<TabHeadersProps> = memo(({ children, activeIndex, onTabClick }) => (
-  <div className="flex w-full">
+  <div className="flex flex-col md:flex-row w-full">
     {React.Children.map(children, (child, index) => {
       if (React.isValidElement(child) && child.type === Tab) {
         const { label } = child.props as TabProps;
@@ -46,7 +46,7 @@ const TabHeaders: FC<TabHeadersProps> = memo(({ children, activeIndex, onTabClic
             onClick={() => onTabClick(index)}
             isActiveColor={activeIndex === index}
             fullWidth={true}
-            className="px-3 py-8 text-lg transform transition-transform duration-300 hover:scale-110 hover:text-primary-red"
+            className="px-3 py-4 md:py-8 text-base md:text-lg transform transition-transform duration-300 hover:scale-110 hover:text-primary-red"
             upperCase={false}
           >
             {label}

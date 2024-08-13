@@ -21,7 +21,9 @@ const Resume = () => {
         <div>
             <Tabs className="space-x-4">
                 <Tab label="Education">
-                    <div></div>
+                    <div className="h-full">
+                        
+                    </div>
                 </Tab>
                 <Tab label="Skills">
                 <div>Test</div>

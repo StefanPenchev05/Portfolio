@@ -22,23 +22,23 @@ const EducationCard: React.FC<EducationCardProps> = ({
 }) => {
   return (
     <div className="w-full bg-gradient-to-b bg-transparent from-[#1e2024] to-[#23272b] shadow-button transition-all z-10 border-0 rounded-2xl p-8">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-4 font-secondary">
-          <div className="w-64 h-48">
+      <div className="flex flex-col md:flex-row items-center justify-between">
+        <div className="flex flex-col md:flex-row items-center space-x-0 md:space-x-4 font-secondary">
+          <div className="w-full md:w-64 h-48 mb-4 md:mb-0">
             <img src={image} className="w-full h-full rounded-xl" />
           </div>
-          <div className="flex flex-col pl-8 font-primary text-light-text">
+          <div className="flex flex-col pl-0 md:pl-8 font-primary text-light-text">
             <div className="bg-[#545961] rounded-xl px-2 py-1 w-fit">
               <p>
                 {startYear} - {endYear}
               </p>
             </div>
-            <p className="text-light-text text-3xl mt-5 mb-6">{subject}</p>
-            <p className="text-light-text text-xl mt-4 mb-2">{place}</p>
-            <p className="text-[#878e99] text-base">{location}</p>
+            <p className="text-light-text text-xl md:text-3xl mt-5 mb-6">{subject}</p>
+            <p className="text-light-text text-lg md:text-xl mt-4 mb-2">{place}</p>
+            <p className="text-[#878e99] text-sm md:text-base">{location}</p>
           </div>
         </div>
-        <Button>
+        <Button className="mt-4 md:mt-0">
           <a href={admissionLink} target="_blank" rel="noopener noreferrer">
             Admission
           </a>

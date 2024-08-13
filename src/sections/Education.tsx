@@ -26,28 +26,28 @@ const education = [
 const Education = () => {
   return (
     <MainLayout>
-      <div className="w-4/5 space-y-12">
-        <div className="text-center font-secondar w-full">
+      <div className="w-full md:w-4/5 space-y-12 px-4 md:px-0">
+        <div className="text-center font-secondary w-full">
           <div className="uppercase text-primary-red flex justify-center space-x-2 mb-4">
             <span>Secondary</span>
             <span>And</span>
             <span>Bachelor</span>
           </div>
-          <b className="text-5xl text-light-text">Education</b>
+          <b className="text-3xl md:text-5xl text-light-text">Education</b>
         </div>
         <div className="flex flex-col space-y-6">
-            {education.map((el, index) => (
-                <EducationCard
-                    key={index}
-                    image={el.image}
-                    startYear={el.startYear}
-                    endYear={el.endYear}
-                    subject={el.subject}
-                    place={el.place}
-                    location={el.location}
-                    admissionLink={el.admissionLink}
-                />
-            ))}
+          {education.map((el, index) => (
+            <EducationCard
+              key={index}
+              image={el.image}
+              startYear={el.startYear}
+              endYear={el.endYear}
+              subject={el.subject}
+              place={el.place}
+              location={el.location}
+              admissionLink={el.admissionLink}
+            />
+          ))}
         </div>
       </div>
     </MainLayout>
