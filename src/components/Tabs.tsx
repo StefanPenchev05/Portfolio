@@ -20,7 +20,7 @@ const Tabs: FC<TabsProps> = ({ children, className }) => {
   };
 
   return (
-    <div className={`w-full space-y-5 ${className}`}>
+    <div className={`w-full space-y-8 ${className}`}>
       <TabHeaders activeIndex={activeIndex} onTabClick={handleTabClick}>
         {children}
       </TabHeaders>

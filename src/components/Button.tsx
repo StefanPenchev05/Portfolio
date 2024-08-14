@@ -9,6 +9,7 @@ interface ButtonProps {
   isActiveColor?:boolean;
   fullWidth?: boolean;
   upperCase?:boolean;
+  isActive?:boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -18,7 +19,8 @@ const Button: React.FC<ButtonProps> = ({
   roundedFull = false,
   isActiveColor = true,
   fullWidth = false,
-  upperCase = true
+  upperCase = true,
+  isActive = true
 }) => {
   const baseClasses =
     `${upperCase ? "uppercase" : ""} ${isActiveColor ? "text-primary-red" : "text-light-text"} bg-gradient-to-b
@@ -44,6 +46,7 @@ const Button: React.FC<ButtonProps> = ({
     <button
       className={`${baseClasses} ${roundedClasses} ${className}`}
       onClick={handleClick}
+      disabled={!isActive}
     >
       {children}
     </button>

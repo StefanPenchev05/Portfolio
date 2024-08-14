@@ -4,15 +4,18 @@ interface DividerProps {
   labelName?: string;
   className?: string;
   borderColor?: string;
+  orientation?: "horizontal" | "vertical";
 }
 
-const Divider: React.FC<DividerProps> = ({ labelName, className, borderColor }) => {
+const Divider: React.FC<DividerProps> = ({ labelName, className, borderColor, orientation = "horizontal" }) => {
   const borderColorStyle = borderColor ? borderColor : "border-gray-700";
+  const isHorizontal = orientation === "horizontal";
+
   return (
-    <div className={`flex items-center ${className}`}>
-      <span className={`flex-grow border-t ${borderColorStyle}`}></span>
-      {labelName && <span className="mx-2 text-light-text">{labelName}</span>}
-      <span className={`flex-grow border-t ${borderColorStyle}`}></span>
+    <div className={`flex ${isHorizontal ? "items-center" : "flex-col"} ${className}`}>
+      <span className={`flex-grow ${isHorizontal ? "border-t" : "border-l"} ${borderColorStyle}`}></span>
+      {labelName && <span className={`mx-2 ${isHorizontal ? "text-light-text" : "my-2"}`}>{labelName}</span>}
+      <span className={`flex-grow ${isHorizontal ? "border-t" : "border-l"} ${borderColorStyle}`}></span>
     </div>
   );
 };

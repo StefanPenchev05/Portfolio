@@ -56,7 +56,7 @@ const Features = () => {
   return (
     <MainLayout>
       <div className="w-4/5 space-y-12">
-        <div className="text-center text-pretty font-secondar w-full">
+        <div className="text-center text-pretty font-secondary w-full">
           <p className="uppercase text-primary-red mb-4">Features</p>
           <b className="text-5xl text-light-text">What I Do</b>
         </div>
