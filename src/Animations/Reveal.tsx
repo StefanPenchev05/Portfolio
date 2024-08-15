@@ -5,6 +5,7 @@ interface RevealProps {
   children: React.ReactNode;
   width?: "fit-content" | "100%";
   textEffect?: boolean;
+  lineBackgroundColor?:"#ff014f" | "linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(255,1,79,1) 100%)";
   className?:string;
 }
 
@@ -12,6 +13,7 @@ const Reveal: React.FC<RevealProps> = ({
   children,
   width = "fit-content",
   textEffect = true,
+  lineBackgroundColor = "linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(255,1,79,1) 100%)",
   className
 }) => {
   const ref = useRef(null);
@@ -55,7 +57,7 @@ const Reveal: React.FC<RevealProps> = ({
             bottom: 4,
             left: 0,
             right: 0,
-            background: "#ff014f",
+            background: lineBackgroundColor,
             zIndex: 20,
           }}
         />

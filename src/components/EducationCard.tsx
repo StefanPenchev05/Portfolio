@@ -37,19 +37,21 @@ const EducationCard: React.FC<EducationCardProps> = ({
               </div>
             </Reveal>
             <Reveal>
-              <p className="text-light-text text-xl md:text-3xl mt-5 mb-6">{subject}</p>
-              <p className="text-light-text text-lg md:text-xl mt-4 mb-2">{place}</p>
+              <p className="text-light-text text-xl md:text-3xl mt-5 mb-6">
+                {subject}
+              </p>
+              <p className="text-light-text text-lg md:text-xl mt-4 mb-2">
+                {place}
+              </p>
               <p className="text-[#878e99] text-sm md:text-base">{location}</p>
             </Reveal>
           </div>
         </div>
-        <Reveal>
-          <Button className="mt-4 md:mt-0">
-            <a href={admissionLink} target="_blank" rel="noopener noreferrer">
-              Admission
-            </a>
-          </Button>
-        </Reveal>
+        <Button className="mt-4 md:mt-0">
+          <a href={admissionLink} target="_blank" rel="noopener noreferrer">
+            Admission
+          </a>
+        </Button>
       </div>
     </div>
   );

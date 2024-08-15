@@ -46,7 +46,7 @@ const TabHeaders: FC<TabHeadersProps> = memo(({ children, activeIndex, onTabClic
             onClick={() => onTabClick(index)}
             isActiveColor={activeIndex === index}
             fullWidth={true}
-            className="px-3 py-4 md:py-8 text-base md:text-lg transform transition-transform duration-300 hover:scale-110 hover:text-primary-red"
+            className="px-3 py-4 md:py-8 text-base md:text-lg transform transition-transform duration-300 hover:scale-105 hover:text-primary-red"
             upperCase={false}
           >
             {label}

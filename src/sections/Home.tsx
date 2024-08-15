@@ -81,20 +81,20 @@ const Home = () => {
           <div className="xl:px-2 px-0 xl:w-1/2 w-full space-y-24 xl:mt-0 mt-8">
             <div className="space-y-12 text-light-text">
               <div className="space-y-8 font-secondary">
-                <Reveal>
+                <Reveal lineBackgroundColor={"#ff014f"}>
                   <p className="uppercase font-thin text-sm max-xl:text-center leading-relaxed tracking-widest">
                     Welcome to my professional portfolio
                   </p>
                 </Reveal>
                 <div className="text-pretty text-2xl md:text-4xl xl:text-5xl text-light-bg leading-b1 h-fit">
-                  <Reveal>
+                  <Reveal lineBackgroundColor={"#ff014f"}>
                     <b>
                       Hello, I’m{" "}
                       <span className="text-primary-red">Stefan Penchev</span>
                     </b>
                   </Reveal>
                   <div className="box-border text-xl md:text-4xl xl:text-5xl tracking-widest">
-                    <Reveal>
+                    <Reveal lineBackgroundColor={"#ff014f"}>
                       <b>a </b>
                       <b className="animate-blink-caret border-r-2">
                         {displayedText}
@@ -104,12 +104,12 @@ const Home = () => {
                 </div>
               </div>
               <p className="text-wrap text-base leading-relaxed font-primary">
-                <Reveal>
+                <Reveal lineBackgroundColor={"#ff014f"}>
                   I am a{" "}
                   <span className="font-bold">19-year-old programmer</span> with{" "}
                   <span className="font-bold">eight years of experience</span>.
                 </Reveal>
-                <Reveal>
+                <Reveal lineBackgroundColor={"#ff014f"}>
                   <br />I have a passion for{" "}
                   <span className="font-bold">
                     building creative front-end visualizations
@@ -121,7 +121,7 @@ const Home = () => {
                   </span>
                   .
                 </Reveal>
-                <Reveal>
+                <Reveal lineBackgroundColor={"#ff014f"}>
                   <br />
                   <span className="italic">
                     Student at University of Luxembourg.
@@ -131,7 +131,7 @@ const Home = () => {
             </div>
             <div className="flex flex-col space-y-6 xl:flex-row xl:space-y-0">
               <div className="flex flex-col space-y-4 w-full">
-                <Reveal>
+                <Reveal lineBackgroundColor={"#ff014f"}>
                   <p className="uppercase text-sm text-light-text">
                     Find with me
                   </p>
@@ -146,7 +146,7 @@ const Home = () => {
               </div>
               <div className="flex">
                 <div className="flex flex-col space-y-4 w-full">
-                  <Reveal>
+                  <Reveal lineBackgroundColor={"#ff014f"}>
                     <p className="uppercase text-sm text-light-text">
                       Best Skill on
                     </p>
