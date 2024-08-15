@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "./Button";
+import Divider from "./Divider";
 
 interface TimeLineProps {
   children: React.ReactNode;
@@ -16,8 +16,9 @@ const TimeLine: React.FC<TimeLineProps> = ({ children, title, duration }) => {
         </div>
         <b className="text-3xl text-light-text">{title}</b>
       </div>
-      <div className="flex flex-row-reverse w-full h-full">
-        <div className="flex-grow">
+      <div className="flex flex-row w-full h-full">
+        <Pillar/>
+        <div className="flex-grow space-y-14">
           {React.Children.map(children, (child) => {
             if (React.isValidElement(child) && child.type === EventCard) {
               return child;
@@ -25,7 +26,6 @@ const TimeLine: React.FC<TimeLineProps> = ({ children, title, duration }) => {
             return null;
           })}
         </div>
-        <div className="mx-4 border-l-4 border-[#17191c]"></div>
       </div>
     </div>
   );
@@ -45,33 +45,79 @@ const EventCard: React.FC<EventCardProps> = ({
   duration,
 }) => {
   const [textColor, setTextColor] = useState<string>("text-[#878e99]");
+  const [circleColor, setCircleColor] = useState<string>("bg-dark-bg");
+  const [bgGradient, setBgGradient] = useState<string>("bg-gradient-to-b");
+
 
   return (
-    <div
-      className="w-full bg-gradient-to-b bg-transparent from-[#1e2024] to-[#23272b] shadow-button transition-all z-10 border-0 rounded-2xl px-10 py-11"
-      onMouseEnter={() => setTextColor("text-light-text")}
-      onMouseLeave={() => setTextColor("text-[#878e99]")}
-    >
-      <div className="space-y-5">
-        <div className="flex items-center justify-between pb-5">
-          <div className="flex flex-col space-y-2">
-            <span className="text-light-text text-2xl">{title}</span>
-            <span className={`text-sm ${textColor}`}>{location}</span>
+    <div className="relative flex space-y-14 w-full">
+      <div
+        className={`w-full h-80 ${bgGradient} shadow-button transition-all z-10 border-0 rounded-md px-10 py-11`}
+        onMouseEnter={() => {
+          setTextColor("text-light-text");
+          setCircleColor("bg-primary-red");
+          setBgGradient("bg-gradient-to-b-reverse");
+        }}
+        onMouseLeave={() => {
+          setTextColor("text-[#878e99]");
+          setCircleColor("bg-dark-bg");
+          setBgGradient("bg-gradient-to-b");
+        }}
+      >
+        <div className="flex flex-col justify-between h-full">
+          <div className="flex justify-between pb-5">
+            <div className="flex flex-col space-y-2 text-pretty w-2/3">
+              <span className="text-light-text text-2xl">{title}</span>
+              <span className={`text-sm ${textColor}`}>{location}</span>
+            </div>
+            <DurationLabel>{duration}</DurationLabel>
+            <Divider orientation="horizontal" />
           </div>
-          <Button isActive={false}>{duration}</Button>
+          <Divider orientation="horizontal" className="border-[#17191c]" />
+          <div className={`w-full text-pretty ${textColor} text-lg text-start`}>
+            {description}
+          </div>
         </div>
-        <div className={`w-full text-pretty ${textColor}`}>{description}</div>
       </div>
+      <Circle circleColor={circleColor}/>
+      <div className="absolute border-t-4 top-2 border-[#17191c] w-4 z-10 -ml-[16px]"></div>
     </div>
   );
 };
 
-const Circle = () => {
-  return <div></div>;
+interface DurationLabelProps {
+  children: React.ReactNode;
+}
+
+const DurationLabel: React.FC<DurationLabelProps> = ({ children }) => {
+  return (
+    <div
+      className="
+      bg-transparent from-[#1e2024] to-[#23272b] 
+      shadow-button transition-all z-10 
+      text-sm font-medium border-0 h-fit w-fit p-4 text-primary-red"
+    >
+      {children}
+    </div>
+  );
+};
+
+interface CircleProps{
+  circleColor: string;
+}
+
+const Circle:React.FC<CircleProps> = ({ circleColor }) => {
+  return (
+    <div
+      className={`absolute ${circleColor} left-0 border-[5px] border-[#17191c] bg-dark-bg w-5 h-5 z-10 rounded-full -ml-[36px]`}
+    >
+      <span className="w-5 h-5 rounded-full"></span>
+    </div>
+  );
 };
 
 const Pillar = () => {
-  return <div></div>;
+  return <div className="mr-6 border-l-4 border-[#17191c]"></div>;
 };
 
 export { TimeLine, EventCard };

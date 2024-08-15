@@ -23,17 +23,23 @@ const Resume = () => {
                       title="BSc in Computer Science"
                       location="University of Luxembourg"
                       duration="2024 - Current"
-                      description="The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture."
+                      description="Pursuing a Bachelor's degree in Computer Science."
+                    />
+                    <EventCard
+                      title="Mathematics, Informatics and English"
+                      location="Konstantin Velichkov Specialized Mathematics High School"
+                      duration="2020 - 2024"
+                      description="Studying Mathematics, Informatics, and English at a specialized high school."
                     />
                   </TimeLine>
                 </div>
                 <div className="flex-grow">
-                  <TimeLine title="Education Quality" duration="2016 - Current">
+                  <TimeLine title="Job Experience" duration="2023 - 2024">
                     <EventCard
-                      title="BSc in Computer Science"
-                      location="University of Luxembourg"
-                      duration="2024 - Current"
-                      description="The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture."
+                      title="Teaching JS, HTML, CSS and Scratch"
+                      location="MindHub, Pazardjik"
+                      duration="2023 - 2024"
+                      description="Instructing young learners in JavaScript, HTML, CSS, and Scratch programming."
                     />
                   </TimeLine>
                 </div>
