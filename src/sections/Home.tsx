@@ -12,6 +12,7 @@ import {
 
 import HomeAvatar from "../assets/home-logo.png";
 import Divider from "../components/Divider";
+import Reveal from "../Animations/Reveal";
 
 const contactSocialMediaLinks = [
   {
@@ -80,47 +81,61 @@ const Home = () => {
           <div className="xl:px-2 px-0 xl:w-1/2 w-full space-y-24 xl:mt-0 mt-8">
             <div className="space-y-12 text-light-text">
               <div className="space-y-8 font-secondary">
-                <p className="uppercase font-thin text-sm max-xl:text-center leading-relaxed tracking-widest">
-                  Welcome to my professional portfolio
-                </p>
+                <Reveal>
+                  <p className="uppercase font-thin text-sm max-xl:text-center leading-relaxed tracking-widest">
+                    Welcome to my professional portfolio
+                  </p>
+                </Reveal>
                 <div className="text-pretty text-2xl md:text-4xl xl:text-5xl text-light-bg leading-b1 h-fit">
-                  <b>
-                    Hello, I’m{" "}
-                    <span className="text-primary-red">Stefan Penchev</span>
-                  </b>
-                  <div className="box-border text-xl md:text-4xl xl:text-5xl tracking-widest">
-                    <b>a </b>
-                    <b className="animate-blink-caret border-r-2">
-                      {displayedText}
+                  <Reveal>
+                    <b>
+                      Hello, I’m{" "}
+                      <span className="text-primary-red">Stefan Penchev</span>
                     </b>
+                  </Reveal>
+                  <div className="box-border text-xl md:text-4xl xl:text-5xl tracking-widest">
+                    <Reveal>
+                      <b>a </b>
+                      <b className="animate-blink-caret border-r-2">
+                        {displayedText}
+                      </b>
+                    </Reveal>
                   </div>
                 </div>
               </div>
               <p className="text-wrap text-base leading-relaxed font-primary">
-                I am a <span className="font-bold">19-year-old programmer</span>{" "}
-                with{" "}
-                <span className="font-bold">eight years of experience</span>.
-                <br />I have a passion for{" "}
-                <span className="font-bold">
-                  building creative front-end visualizations
-                </span>{" "}
-                and
-                <br />
-                <span className="font-bold">
-                  developing complex backend systems
-                </span>
-                .
-                <br />
-                <span className="italic">
-                  Student at University of Luxembourg.
-                </span>
+                <Reveal>
+                  I am a{" "}
+                  <span className="font-bold">19-year-old programmer</span> with{" "}
+                  <span className="font-bold">eight years of experience</span>.
+                </Reveal>
+                <Reveal>
+                  <br />I have a passion for{" "}
+                  <span className="font-bold">
+                    building creative front-end visualizations
+                  </span>{" "}
+                  and
+                  <br />
+                  <span className="font-bold">
+                    developing complex backend systems
+                  </span>
+                  .
+                </Reveal>
+                <Reveal>
+                  <br />
+                  <span className="italic">
+                    Student at University of Luxembourg.
+                  </span>
+                </Reveal>
               </p>
             </div>
             <div className="flex flex-col space-y-6 xl:flex-row xl:space-y-0">
               <div className="flex flex-col space-y-4 w-full">
-                <p className="uppercase text-sm text-light-text">
-                  Find with me
-                </p>
+                <Reveal>
+                  <p className="uppercase text-sm text-light-text">
+                    Find with me
+                  </p>
+                </Reveal>
                 <div className="flex space-x-4">
                   {contactSocialMediaLinks.map((el, index) => (
                     <IconButton className="w-14 h-14" link={el.link}>
@@ -131,9 +146,11 @@ const Home = () => {
               </div>
               <div className="flex">
                 <div className="flex flex-col space-y-4 w-full">
-                  <p className="uppercase text-sm text-light-text">
-                    Best Skill on
-                  </p>
+                  <Reveal>
+                    <p className="uppercase text-sm text-light-text">
+                      Best Skill on
+                    </p>
+                  </Reveal>
                   <div className="flex space-x-4">
                     {bestSkillOn.map((el) => (
                       <IconButton isButton={false} className="w-14 h-14">

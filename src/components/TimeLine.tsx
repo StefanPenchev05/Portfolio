@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Divider from "./Divider";
+import Reveal from "../Animations/Reveal";
 
 interface TimeLineProps {
   children: React.ReactNode;
@@ -10,14 +11,16 @@ interface TimeLineProps {
 const TimeLine: React.FC<TimeLineProps> = ({ children, title, duration }) => {
   return (
     <div className="space-y-8">
-      <div className="font-secondary w-full">
-        <div className="uppercase text-primary-red space-x-2 mb-2">
-          <span>{duration}</span>
+      <Reveal>
+        <div className="font-secondary w-full">
+          <div className="uppercase text-primary-red space-x-2 mb-2">
+            <span>{duration}</span>
+          </div>
+          <b className="text-3xl text-light-text">{title}</b>
         </div>
-        <b className="text-3xl text-light-text">{title}</b>
-      </div>
+      </Reveal>
       <div className="flex flex-row w-full h-full">
-        <Pillar/>
+        <Pillar />
         <div className="flex-grow space-y-14">
           {React.Children.map(children, (child) => {
             if (React.isValidElement(child) && child.type === EventCard) {
@@ -48,7 +51,6 @@ const EventCard: React.FC<EventCardProps> = ({
   const [circleColor, setCircleColor] = useState<string>("bg-dark-bg");
   const [bgGradient, setBgGradient] = useState<string>("bg-gradient-to-b");
 
-
   return (
     <div className="relative flex flex-col md:flex-row space-y-0 md:space-y-14 w-full">
       <div
@@ -65,21 +67,30 @@ const EventCard: React.FC<EventCardProps> = ({
         }}
       >
         <div className="flex flex-col justify-between h-full">
-          <div className="flex justify-between pb-5">
-            <div className="flex flex-col space-y-2 text-pretty w-2/3">
-              <span className="text-light-text text-xs md:text-2xl">{title}</span>
-              <span className={`text-xs md:text-sm ${textColor}`}>{location}</span>
+          <Reveal width="100%">
+            <div className="flex flex-row items-center justify-between pb-5">
+              <div className="flex flex-col text-wrap space-y-2 w-2/3">
+                <span className="text-light-text text-xs md:text-2xl w-full">
+                  {title}
+                </span>
+                <span className={`text-xs md:text-sm ${textColor} w-full`}>
+                  {location}
+                </span>
+              </div>
+              <DurationLabel>{duration}</DurationLabel>
             </div>
-            <DurationLabel>{duration}</DurationLabel>
-            <Divider orientation="horizontal" />
-          </div>
+          </Reveal>
           <Divider orientation="horizontal" className="border-[#17191c]" />
-          <div className={`w-full text-pretty ${textColor} text-sm md:text-lg text-start`}>
-            {description}
-          </div>
+          <Reveal width="100%">
+            <div
+              className={`w-full text-pretty ${textColor} text-sm md:text-lg text-start`}
+            >
+              {description}
+            </div>
+          </Reveal>
         </div>
       </div>
-      <Circle circleColor={circleColor}/>
+      <Circle circleColor={circleColor} />
       <div className="absolute border-t-4 top-2 border-[#17191c] w-4 z-10 -ml-[16px]"></div>
     </div>
   );
@@ -94,19 +105,19 @@ const DurationLabel: React.FC<DurationLabelProps> = ({ children }) => {
     <div
       className="
       bg-transparent from-[#1e2024] to-[#23272b] 
-      shadow-button transition-all z-10 text-xs text-center
-      md:text-sm font-medium border-0 h-fit w-2/3 md:w-fit p-4 text-primary-red"
+      shadow-button transition-all z-10 text-xs max-md:text-center
+      md:text-sm font-medium border-0 h-fit w-1/3 md:w-fit p-3 text-primary-red"
     >
       {children}
     </div>
   );
 };
 
-interface CircleProps{
+interface CircleProps {
   circleColor: string;
 }
 
-const Circle:React.FC<CircleProps> = ({ circleColor }) => {
+const Circle: React.FC<CircleProps> = ({ circleColor }) => {
   return (
     <div
       className={`absolute ${circleColor} left-0 border-[5px] border-[#17191c] bg-dark-bg w-5 h-5 z-10 rounded-full -ml-[36px]`}

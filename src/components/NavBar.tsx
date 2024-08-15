@@ -76,9 +76,9 @@ const NavBar: React.FC = () => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           roundedFull={true}
         >
-          <span className="block w-6 h-0.5 bg-primary-red"></span>
-          <span className="block w-6 h-0.5 bg-primary-red"></span>
-          <span className="block w-6 h-0.5 bg-primary-red"></span>
+            <span className="block w-6 h-0.5 bg-primary-red"></span>
+            <span className="block w-6 h-0.5 bg-primary-red"></span>
+            <span className="block w-6 h-0.5 bg-primary-red"></span>
         </Button>
       </div>
       {isMenuOpen && (

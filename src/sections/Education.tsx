@@ -1,7 +1,7 @@
-import React from "react";
 import MainLayout from "../components/MainLayout";
 import EducationCard from "../components/EducationCard";
 import Divider from "../components/Divider";
+import Reveal from "../Animations/Reveal";
 
 const education = [
   {
@@ -31,14 +31,16 @@ const Education = () => {
   return (
     <MainLayout>
       <div className="w-full md:w-4/5 space-y-12 px-4 md:px-0">
-        <div className="text-center font-secondary w-full">
-          <div className="uppercase text-primary-red space-x-2 mb-4">
-            <span>Secondary</span>
-            <span>And</span>
-            <span>Bachelor</span>
+        <Reveal width="100%">
+          <div className="text-center font-secondary w-full">
+              <div className="uppercase text-primary-red space-x-2 mb-4">
+                  <span>Secondary</span>
+                  <span>And</span>
+                  <span>Bachelor</span>
+              </div>
+            <b className="text-3xl md:text-5xl text-light-text">Education</b>
           </div>
-          <b className="text-3xl md:text-5xl text-light-text">Education</b>
-        </div>
+        </Reveal>
         <div className="flex flex-col space-y-6">
           {education.map((el, index) => (
             <EducationCard

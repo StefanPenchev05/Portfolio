@@ -23,11 +23,11 @@ const Button: React.FC<ButtonProps> = ({
   isActive = true
 }) => {
   const baseClasses =
-    `${upperCase ? "uppercase" : ""} ${isActiveColor ? "text-primary-red" : "text-light-text"} bg-gradient-to-b
+    `${upperCase ? "uppercase" : ""} ${isActiveColor ? "text-primary-red" : "text-light-text"}
     bg-transparent from-[#1e2024] to-[#23272b] 
     shadow-button transition-all z-10 
     text-sm font-medium border-0
-    ${fullWidth ? "w-full" : "w-fit"}`;
+    ${fullWidth ? "w-full" : ""}`;
 
   const roundedClasses = roundedFull
     ? "rounded-full w-12 h-12 flex flex-col items-center justify-center"

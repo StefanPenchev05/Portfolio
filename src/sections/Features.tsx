@@ -11,7 +11,8 @@ import {
 
 import { GiGearStickPattern } from "react-icons/gi";
 import MainLayout from "../components/MainLayout";
-import Divider from "../components/Divider";
+import Divider from "../components/Divider"
+import Reveal from "../Animations/Reveal";
 
 const features = [
   {
@@ -57,12 +58,15 @@ const Features = () => {
     <MainLayout>
       <div className="w-4/5 space-y-12">
         <div className="text-center text-pretty font-secondary w-full">
-          <p className="uppercase text-primary-red mb-4">Features</p>
-          <b className="text-5xl text-light-text">What I Do</b>
+          <Reveal width="100%">
+            <p className="uppercase text-primary-red mb-4">Features</p>
+            <b className="text-5xl text-light-text">What I Do</b>
+          </Reveal>
         </div>
         <div className="flex flex-wrap">
           {features.map((el, index) => (
             <FeatureCard
+              key={index}
               icon={el.icon}
               title={el.title}
               description={el.description}
