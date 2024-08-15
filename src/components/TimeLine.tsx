@@ -50,7 +50,7 @@ const EventCard: React.FC<EventCardProps> = ({
 
 
   return (
-    <div className="relative flex space-y-14 w-full">
+    <div className="relative flex flex-col md:flex-row space-y-0 md:space-y-14 w-full">
       <div
         className={`w-full h-80 ${bgGradient} shadow-button transition-all z-10 border-0 rounded-md px-10 py-11`}
         onMouseEnter={() => {
@@ -67,14 +67,14 @@ const EventCard: React.FC<EventCardProps> = ({
         <div className="flex flex-col justify-between h-full">
           <div className="flex justify-between pb-5">
             <div className="flex flex-col space-y-2 text-pretty w-2/3">
-              <span className="text-light-text text-2xl">{title}</span>
-              <span className={`text-sm ${textColor}`}>{location}</span>
+              <span className="text-light-text text-xs md:text-2xl">{title}</span>
+              <span className={`text-xs md:text-sm ${textColor}`}>{location}</span>
             </div>
             <DurationLabel>{duration}</DurationLabel>
             <Divider orientation="horizontal" />
           </div>
           <Divider orientation="horizontal" className="border-[#17191c]" />
-          <div className={`w-full text-pretty ${textColor} text-lg text-start`}>
+          <div className={`w-full text-pretty ${textColor} text-sm md:text-lg text-start`}>
             {description}
           </div>
         </div>
@@ -94,8 +94,8 @@ const DurationLabel: React.FC<DurationLabelProps> = ({ children }) => {
     <div
       className="
       bg-transparent from-[#1e2024] to-[#23272b] 
-      shadow-button transition-all z-10 
-      text-sm font-medium border-0 h-fit w-fit p-4 text-primary-red"
+      shadow-button transition-all z-10 text-xs text-center
+      md:text-sm font-medium border-0 h-fit w-2/3 md:w-fit p-4 text-primary-red"
     >
       {children}
     </div>

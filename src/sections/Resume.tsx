@@ -13,49 +13,47 @@ const Resume = () => {
           </div>
           <b className="text-5xl text-light-text">My Resume</b>
         </div>
-        <div>
-          <Tabs className="space-x-4">
-            <Tab label="Education">
-              <div className="flex space-x-24 justify-between h-full">
-                <div className="flex-grow">
-                  <TimeLine title="Education Quality" duration="2016 - Current">
-                    <EventCard
-                      title="BSc in Computer Science"
-                      location="University of Luxembourg"
-                      duration="2024 - Current"
-                      description="Pursuing a Bachelor's degree in Computer Science."
-                    />
-                    <EventCard
-                      title="Mathematics, Informatics and English"
-                      location="Konstantin Velichkov Specialized Mathematics High School"
-                      duration="2020 - 2024"
-                      description="Studying Mathematics, Informatics, and English at a specialized high school."
-                    />
-                  </TimeLine>
-                </div>
-                <div className="flex-grow">
-                  <TimeLine title="Job Experience" duration="2023 - 2024">
-                    <EventCard
-                      title="Teaching JS, HTML, CSS and Scratch"
-                      location="MindHub, Pazardjik"
-                      duration="2023 - 2024"
-                      description="Instructing young learners in JavaScript, HTML, CSS, and Scratch programming."
-                    />
-                  </TimeLine>
-                </div>
+        <Tabs className="space-x-4">
+          <Tab label="Education">
+            <div className="flex flex-col md:flex-row space-y-24 md:space-y-0 md:space-x-24 justify-between h-full">
+              <div className="flex-grow">
+                <TimeLine title="Education Quality" duration="2016 - Current">
+                  <EventCard
+                    title="BSc in Computer Science"
+                    location="University of Luxembourg"
+                    duration="2024 - Current"
+                    description="Pursuing a Bachelor's degree in Computer Science."
+                  />
+                  <EventCard
+                    title="Mathematics, Informatics and English"
+                    location="Konstantin Velichkov Specialized Mathematics High School"
+                    duration="2020 - 2024"
+                    description="Studying Mathematics, Informatics, and English at a specialized high school."
+                  />
+                </TimeLine>
               </div>
-            </Tab>
-            <Tab label="Skills">
-              <div>Test</div>
-            </Tab>
-            <Tab label="Projects">
-              <div>Test</div>
-            </Tab>
-            <Tab label="Volunteering" className="w-full bg-red-600">
-              <div>Test</div>
-            </Tab>
-          </Tabs>
-        </div>
+              <div className="flex-grow">
+                <TimeLine title="Job Experience" duration="2023 - 2024">
+                  <EventCard
+                    title="Teaching JS, HTML, CSS and Scratch"
+                    location="MindHub, Pazardjik"
+                    duration="2023 - 2024"
+                    description="Instructing young learners in JavaScript, HTML, CSS, and Scratch programming."
+                  />
+                </TimeLine>
+              </div>
+            </div>
+          </Tab>
+          <Tab label="Skills">
+            <div>Test</div>
+          </Tab>
+          <Tab label="Projects">
+            <div>Test</div>
+          </Tab>
+          <Tab label="Volunteering" className="w-full bg-red-600">
+            <div>Test</div>
+          </Tab>
+        </Tabs>
       </div>
     </MainLayout>
   );
