@@ -36,50 +36,46 @@ const EducationTab = () => (
 );
 
 const SkillTab = () => (
-    <MainLayout>
-        <div className="w-full flex flex-col md:flex-row max-md:space-y-20 md:space-x-36 items-start">
-            <div className="w-full space-y-9">
-                <div className="flex flex-col space-y-4">
-                    <span className="text-primary-red text-sm font-primary">Featrues</span>
-                    <span className="text-light-text text-4xl font-secondary font-bold">Development Skill</span>
-                </div>
-                <div className="w-full space-y-10">
-                    <SkillBar
-                        skill="html"
-                        percent={100}
-                    />
-                     <SkillBar
-                        skill="html"
-                        percent={85}
-                    />
-                     <SkillBar
-                        skill="html"
-                        percent={85}
-                    />
-                </div>
-            </div>
-            <div className="w-full space-y-9">
-                <div className="flex flex-col space-y-4">
-                    <span className="text-primary-red text-sm font-primary">Featrues</span>
-                    <span className="text-light-text text-4xl font-secondary font-bold">Development Skill</span>
-                </div>
-                <div className="w-full space-y-10">
-                    <SkillBar
-                        skill="html"
-                        percent={85}
-                    />
-                     <SkillBar
-                        skill="html"
-                        percent={85}
-                    />
-                     <SkillBar
-                        skill="html"
-                        percent={85}
-                    />
-                </div>
-            </div>
+  <MainLayout>
+    <div className="w-full flex flex-col md:flex-row max-md:space-y-20 md:space-x-36 items-start">
+      <div className="w-full space-y-9">
+        <div className="flex flex-col space-y-4">
+          <span className="text-primary-red text-sm font-primary">
+            Featrues
+          </span>
+          <span className="text-light-text text-4xl font-secondary font-bold">
+            Development Skill
+          </span>
         </div>
-    </MainLayout>
+        <div className="w-full space-y-6">
+          <SkillBar skill="MongoDB" percent={80} />
+          <SkillBar skill="Express.js" percent={100} />
+          <SkillBar skill="React" percent={90} />
+          <SkillBar skill="Tailwindcss" percent={70} />
+          <SkillBar skill="Node.js" percent={100} />
+          <SkillBar skill="C/C++" percent={60} />
+          <SkillBar skill="Rust" percent={40} />
+        </div>
+      </div>
+      <div className="w-full space-y-9">
+        <div className="flex flex-col space-y-4">
+          <span className="text-primary-red text-sm font-primary">
+            Featrues
+          </span>
+          <span className="text-light-text text-4xl font-secondary font-bold">
+            Soft Skills
+          </span>
+        </div>
+        <div className="w-full space-y-10">
+          <SkillBar skill="Communication" percent={90} />
+          <SkillBar skill="Teamwork" percent={85} />
+          <SkillBar skill="Problem Solving" percent={80} />
+          <SkillBar skill="Adaptability" percent={90} />
+          <SkillBar skill="Leadership" percent={60} />
+        </div>
+      </div>
+    </div>
+  </MainLayout>
 );
 
 const Resume = () => {
@@ -96,15 +92,12 @@ const Resume = () => {
         </Reveal>
         <Tabs className="space-x-4">
           <Tab label="Education">
-            <EducationTab/>
+            <EducationTab />
           </Tab>
           <Tab label="Skills">
-            <SkillTab/>
+            <SkillTab />
           </Tab>
           <Tab label="Projects">
-            <div>Test</div>
-          </Tab>
-          <Tab label="Volunteering" className="w-full bg-red-600">
             <div>Test</div>
           </Tab>
         </Tabs>
