@@ -78,6 +78,12 @@ const SkillTab = () => (
   </MainLayout>
 );
 
+const ProjectTab = () => (
+    <div>
+
+    </div>
+);
+
 const Resume = () => {
   return (
     <MainLayout>
@@ -98,7 +104,7 @@ const Resume = () => {
             <SkillTab />
           </Tab>
           <Tab label="Projects">
-            <div>Test</div>
+            <ProjectTab/>
           </Tab>
         </Tabs>
       </div>
