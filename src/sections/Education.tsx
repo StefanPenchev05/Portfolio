@@ -15,8 +15,8 @@ const education = [
     admissionLink: "https://mgpz.org",
     description: `PMG "Konstantin Velichkov" in Pazardjik is a specialized high school that focuses on mathematics, informatics, and natural sciences, with a strong emphasis on STEM education. The school also integrates language studies, particularly English, into its curriculum. It has a reputation for producing accomplished graduates who excel in both academic and professional fields`,
     achievements: [
-      "37th place out of 102 in the Az Moga Tug I Sega IT competition (2023) ",
-      "7th place out of 102 in the Az Moga Tug I Sega IT competition (2024)",
+      "37th place out of 102 in the \"I can - here and now \" IT competition (2023) ",
+      "7th place out of 102 in the \"I can - here and now \" IT competition (2024)",
     ],
     modules: [
       "Advanced Mathematics",
@@ -69,7 +69,8 @@ const Education = () => {
                   <span>And</span>
                   <span>Bachelor</span>
               </div>
-            <b className="text-3xl md:text-5xl text-light-text">Education</b>
+            <b className="text-3xl md:text-5xl text-light-text mb-4">Education</b>
+            <p className="text-base text-gray-500">Expandable Cards</p>
           </div>
         </Reveal>
         <div className="flex flex-col space-y-6">
