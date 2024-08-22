@@ -1,8 +1,27 @@
+import React from "react";
 import MainLayout from "../components/MainLayout";
 import { Tab, Tabs } from "../components/Tabs";
 import { EventCard, TimeLine } from "../components/TimeLine";
 import Reveal from "../Animations/Reveal";
 import SkillBar from "../components/SkillBar";
+import ProjectCard from "../components/ProjectCard";
+
+import {
+  TbBrandCpp,
+  TbBrandPython,
+  TbBrandMongodb,
+  TbBrandGithub,
+  TbBrandMysql,
+  TbBrandNodejs,
+  TbBrandReact,
+  TbBrandTailwind,
+  TbBrandTypescript,
+  TbBrandRust,
+} from "react-icons/tb";
+
+import FinTrackerLogo from "../assets/FinTrackerLogo.png";
+import LetsTalkLogo from "../assets/LetTalkLogo.webp";
+import CPythonLogo from "../assets/CPythonLogo.webp";
 
 const EducationTab = () => (
   <div className="flex flex-col md:flex-row space-y-24 md:space-y-0 md:space-x-24 justify-between h-full">
@@ -78,10 +97,105 @@ const SkillTab = () => (
   </MainLayout>
 );
 
-const ProjectTab = () => (
-    <div>
+const project = [
+  {
+    picture:
+      "https://www.kouchat.net/images/screenshots/console/kouchat_v1.2.0-main_console.png",
+    title: "C-Chat",
+    description:
+      "The C-Chat project is a network chat console application designed to facilitate real-time communication between multiple users.",
+    stack: [
+      <TbBrandCpp className="text-[#00599C] text-2xl m-2" />,
+      <TbBrandMysql className="text-[#00758F] text-2xl m-2" />,
+    ],
+    link: "",
+  },
+  {
+    picture: FinTrackerLogo,
+    title: "FinTracker",
+    description:
+      "FinTracker is a comprehensive financial tracking application designed to help users manage their personal finances.",
+    stack: [
+      <TbBrandNodejs className="text-[#68A063] text-2xl m-2" />,
+      <TbBrandReact className="text-[#61DAFB] text-2xl m-2" />,
+      <TbBrandTypescript className="text-[#3178C6] text-2xl m-2" />,
+      <TbBrandMongodb className="text-[#4DB33D] text-2xl m-2" />,
+      <TbBrandTailwind className="text-[#38B2AC] text-2xl m-2" />,
+    ],
+    link: "https://github.com/StefanPenchev05/FinTracker",
+  },
+  {
+    picture:
+      "https://github.com/StefanPenchev05/MyClothesV2/blob/main/Logo%20for%20MyClothes-Transparent.png?raw=true",
+    title: "MyClothes",
+    description:
+      "MyClothes is a platform for designers to showcase their clothing products, receive feedback, engage in real-time chat, and get hired by clients.",
+    stack: [
+      <TbBrandNodejs className="text-[#68A063] text-2xl m-2" />,
+      <TbBrandReact className="text-[#61DAFB] text-2xl m-2" />,
+      <TbBrandTypescript className="text-[#3178C6] text-2xl m-2" />,
+      <TbBrandMongodb className="text-[#4DB33D] text-2xl m-2" />,
+      <TbBrandTailwind className="text-[#38B2AC] text-2xl m-2" />,
+    ],
+    link: "https://github.com/StefanPenchev05/MyClothes",
+  },
+  {
+    picture: LetsTalkLogo,
+    title: "Let's Talk",
+    description:
+      "Let's Talk is a communication platform that enables users to engage in real-time chat, share media, and collaborate effectively.",
+    stack: [
+      <TbBrandNodejs className="text-[#68A063] text-2xl m-2" />,
+      <TbBrandReact className="text-[#61DAFB] text-2xl m-2" />,
+      <TbBrandTypescript className="text-[#3178C6] text-2xl m-2" />,
+      <TbBrandMongodb className="text-[#4DB33D] text-2xl m-2" />,
+      <TbBrandTailwind className="text-[#38B2AC] text-2xl m-2" />,
+      <TbBrandGithub className="text-[#333] text-2xl m-2" />,
+    ],
+    link: "https://github.com/StefanPenchev05/Lets-Talk",
+  },
+  {
+    picture: CPythonLogo,
+    title: "CPython Exploration",
+    description:
+      "CPython Exploration is a deep dive into the CPython implementation, providing insights and tools for understanding and extending Python.",
+    stack: [
+      <TbBrandPython className="text-[#FFD43B] text-2xl m-2" />,
+      <TbBrandCpp className="text-[#00599C] text-2xl m-2" />,
+      <TbBrandGithub className="text-[#333] text-2xl m-2" />,
+    ],
+    link: "https://github.com/StefanPenchev05/CPython-exploration",
+  },
+  {
+    picture:
+      "https://w7.pngwing.com/pngs/114/914/png-transparent-rust-programming-language-logo-machine-learning-haskell-crab-animals-cartoon-crab-thumbnail.png",
+    title: "Rust Learning",
+    description:
+      "Rust Learning is a project aimed at exploring the Rust programming language, providing examples, tutorials, and insights into Rust development.",
+    stack: [
+      <TbBrandRust className="text-[#F74C00] text-2xl m-2" />,
+      <TbBrandGithub className="text-[#333] text-2xl m-2" />,
+    ],
+    link: "https://github.com/StefanPenchev05/Rust-Learning",
+  },
+];
 
-    </div>
+const ProjectTab = () => (
+  <div className="flex justify-between flex-wrap">
+    {project.map((card, index) => (
+      <ProjectCard
+        key={index}
+        picture={card.picture}
+        title={card.title}
+        description={card.description}
+        link={card.link}
+      >
+        {card.stack.map((icon, iconIndex) => (
+          <React.Fragment key={iconIndex}>{icon}</React.Fragment>
+        ))}
+      </ProjectCard>
+    ))}
+  </div>
 );
 
 const Resume = () => {
@@ -104,7 +218,7 @@ const Resume = () => {
             <SkillTab />
           </Tab>
           <Tab label="Projects">
-            <ProjectTab/>
+            <ProjectTab />
           </Tab>
         </Tabs>
       </div>
