@@ -63,7 +63,7 @@ const Features = () => {
             <b className="text-5xl text-light-text">What I Do</b>
           </Reveal>
         </div>
-        <div className="flex flex-wrap">
+        <div className="flex justify-center items-center flex-wrap">
           {features.map((el, index) => (
             <FeatureCard
               key={index}

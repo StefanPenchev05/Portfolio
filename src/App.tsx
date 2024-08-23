@@ -6,7 +6,7 @@ import "./index.css";
 
 import Education from "./sections/Education";
 import Resume from "./sections/Resume";
-import Reveal from "./Animations/Reveal";
+import ContactMe from "./sections/ContactMe";
 
 function App() {
   return (
@@ -23,6 +23,9 @@ function App() {
       </Element>
       <Element name="resume">
         <Resume />
+      </Element>
+      <Element name="contact">
+        <ContactMe/>
       </Element>
     </div>
   );

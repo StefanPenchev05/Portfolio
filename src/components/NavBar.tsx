@@ -17,7 +17,6 @@ const tittleAndLinks = [
   { title: "Features", link: "features" },
   { title: "Education", link: "education" },
   { title: "Resume", link: "resume" },
-  { title: "Portfolio", link: "portfolio" },
   { title: "Contact", link: "contact" },
 ];
 
