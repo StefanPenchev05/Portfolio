@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.4e63629f.css",
-    "main.js": "/Portfolio/static/js/main.173e834c.js",
+    "main.css": "/Portfolio/static/css/main.7f277f3d.css",
+    "main.js": "/Portfolio/static/js/main.11d1d781.js",
     "static/media/home-logo.png": "/Portfolio/static/media/home-logo.6f936df1370bb88fadc4.png",
     "static/media/FinTrackerLogo.png": "/Portfolio/static/media/FinTrackerLogo.71d0b12b2a39d55cefe7.png",
     "static/media/light-logo.png": "/Portfolio/static/media/light-logo.a62a72b47cdef2e20301.png",
+    "static/media/ContactMeImg.webp": "/Portfolio/static/media/ContactMeImg.c0c0f994fb0f6c65d2b0.webp",
     "static/media/CPythonLogo.webp": "/Portfolio/static/media/CPythonLogo.aafcd59e0e924bb1b2fe.webp",
     "static/media/LetTalkLogo.webp": "/Portfolio/static/media/LetTalkLogo.3646895f86cc7e34dbd2.webp",
     "static/media/clickSound.wav": "/Portfolio/static/media/clickSound.9ad255ca9ea69fce9ce7.wav",
     "index.html": "/Portfolio/index.html",
-    "main.4e63629f.css.map": "/Portfolio/static/css/main.4e63629f.css.map",
-    "main.173e834c.js.map": "/Portfolio/static/js/main.173e834c.js.map"
+    "main.7f277f3d.css.map": "/Portfolio/static/css/main.7f277f3d.css.map",
+    "main.11d1d781.js.map": "/Portfolio/static/js/main.11d1d781.js.map"
   },
   "entrypoints": [
-    "static/css/main.4e63629f.css",
-    "static/js/main.173e834c.js"
+    "static/css/main.7f277f3d.css",
+    "static/js/main.11d1d781.js"
   ]
 }
