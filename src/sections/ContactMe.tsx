@@ -89,7 +89,7 @@ const ContactMe = () => {
             </b>
           </div>
         </Reveal>
-        <div className="flex flex-col md:flex-row items-center justify-between h-full">
+        <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row items-center justify-between h-full">
           <div className="space-y-10 bg-gradient-to-br from-[#1e2024] to-[#23272b] shadow-button rounded-2xl w-full md:w-1/3 h-full p-4 md:p-8 md:mr-12">
             <img
               src={ContactMeImg}
@@ -134,36 +134,36 @@ const ContactMe = () => {
               </div>
             </div>
           </div>
-                  <div className="flex flex-wrap space-y-8 bg-gradient-to-br from-[#1e2024] to-[#23272b] shadow-button rounded-2xl flex-grow h-full p-6 md:p-11">
-          <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8 w-full">
-            {emailSendingFieldsTop.map((el, index) => (
-              <TextField
-                key={index}
-                title={el.title}
-                fieldType={el.fieldType}
-                text={el.text}
-                setText={el.setText}
-                fullWidth={el.fullWidth}
-              />
-            ))}
+          <div className="flex flex-wrap space-y-8 bg-gradient-to-br from-[#1e2024] to-[#23272b] shadow-button rounded-2xl flex-grow h-full p-6 md:p-11">
+            <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8 w-full">
+              {emailSendingFieldsTop.map((el, index) => (
+                <TextField
+                  key={index}
+                  title={el.title}
+                  fieldType={el.fieldType}
+                  text={el.text}
+                  setText={el.setText}
+                  fullWidth={el.fullWidth}
+                />
+              ))}
+            </div>
+            <div className="w-full space-y-8">
+              {emailSendingFieldsBottom.map((el, index) => (
+                <TextField
+                  key={index}
+                  title={el.title}
+                  fieldType={el.fieldType}
+                  text={el.text}
+                  setText={el.setText}
+                  textArea={el.textArea}
+                  fullWidth={el.fullWidth}
+                />
+              ))}
+            </div>
+            <button className="w-full h-14 uppercase bg-primary-red rounded-md text-light-text font-secondary text-lg shadow-button hover:bg-hover-red transition duration-300 ease-in-out">
+              Send Message
+            </button>
           </div>
-          <div className="w-full space-y-8">
-            {emailSendingFieldsBottom.map((el, index) => (
-              <TextField
-                key={index}
-                title={el.title}
-                fieldType={el.fieldType}
-                text={el.text}
-                setText={el.setText}
-                textArea={el.textArea}
-                fullWidth={el.fullWidth}
-              />
-            ))}
-          </div>
-          <button className="w-full h-14 uppercase bg-primary-red rounded-md text-light-text font-secondary text-lg shadow-button hover:bg-hover-red transition duration-300 ease-in-out">
-            Send Message
-          </button>
-        </div>
         </div>
       </div>
     </MainLayout>
