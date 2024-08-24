@@ -2,6 +2,7 @@ import { useState } from "react";
 import MainLayout from "../components/MainLayout";
 import Reveal from "../Animations/Reveal";
 import IconButton from "../components/IconButton";
+import emailjs from '@emailjs/browser';
 
 import {
   TbBrandFacebook,
@@ -18,6 +19,33 @@ const ContactMe = () => {
   const [emailFieldText, setEmailFieldText] = useState<string>("");
   const [subjetText, setSubjectText] = useState<string>("");
   const [messageFieldText, setMessageFieldText] = useState<string>("");
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("Form submitted");
+
+    const emailData = {
+      name: nameFieldText,
+      phone: phoneFieldText,
+      email: emailFieldText,
+      subject: subjetText,
+      message: messageFieldText,
+    };
+
+    console.log("Email data:", emailData);
+
+    const service_id = "service_be7c839";
+    const template_id = "template_upacz9v";
+    const publicKey = "ugamboz7JUE2O6hwZ";
+
+    emailjs.send(service_id, template_id, emailData, publicKey)
+        .then((result) => {
+            console.log("Email sent successfully:", result.text);
+        })
+        .catch((error) => {
+            console.log("Error sending email:", error.text);
+        });
+  };
 
   const contactSocialMediaLinks = [
     {
@@ -82,7 +110,7 @@ const ContactMe = () => {
         <Reveal width="100%">
           <div className="text-center font-secondary w-full">
             <div className="uppercase text-primary-red space-x-2 mb-4">
-              <span>Conatact</span>
+              <span>Contact</span>
             </div>
             <b className="text-3xl md:text-6xl text-light-text mb-4">
               Contact With Me
@@ -134,7 +162,10 @@ const ContactMe = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap space-y-8 bg-gradient-to-br from-[#1e2024] to-[#23272b] shadow-button rounded-2xl flex-grow h-full p-6 md:p-11">
+          <form
+            className="flex flex-wrap space-y-8 bg-gradient-to-br from-[#1e2024] to-[#23272b] shadow-button rounded-2xl flex-grow h-full p-6 md:p-11"
+            onSubmit={(e) => handleSubmit(e)}
+          >
             <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8 w-full">
               {emailSendingFieldsTop.map((el, index) => (
                 <TextField
@@ -160,10 +191,13 @@ const ContactMe = () => {
                 />
               ))}
             </div>
-            <button className="w-full h-14 uppercase bg-primary-red rounded-md text-light-text font-secondary text-lg shadow-button hover:bg-hover-red transition duration-300 ease-in-out">
+            <button
+              className="w-full h-14 uppercase bg-primary-red rounded-md text-light-text font-secondary text-lg shadow-button hover:bg-hover-red transition duration-300 ease-in-out"
+              type="submit"
+            >
               Send Message
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </MainLayout>
