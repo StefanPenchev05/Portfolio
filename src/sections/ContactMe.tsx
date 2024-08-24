@@ -25,14 +25,13 @@ const ContactMe = () => {
     console.log("Form submitted");
 
     const emailData = {
-      name: nameFieldText,
-      phone: phoneFieldText,
+    to_name: "Stefan Penchev",
+      from_name: nameFieldText,
+      phone_number: phoneFieldText,
       email: emailFieldText,
       subject: subjetText,
       message: messageFieldText,
     };
-
-    console.log("Email data:", emailData);
 
     const service_id = "service_be7c839";
     const template_id = "template_upacz9v";
