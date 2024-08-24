@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.7f277f3d.css",
-    "main.js": "/Portfolio/static/js/main.11d1d781.js",
+    "main.css": "/Portfolio/static/css/main.c04dce59.css",
+    "main.js": "/Portfolio/static/js/main.c5a3154e.js",
     "static/media/home-logo.png": "/Portfolio/static/media/home-logo.6f936df1370bb88fadc4.png",
     "static/media/FinTrackerLogo.png": "/Portfolio/static/media/FinTrackerLogo.71d0b12b2a39d55cefe7.png",
     "static/media/light-logo.png": "/Portfolio/static/media/light-logo.a62a72b47cdef2e20301.png",
@@ -10,11 +10,11 @@
     "static/media/LetTalkLogo.webp": "/Portfolio/static/media/LetTalkLogo.3646895f86cc7e34dbd2.webp",
     "static/media/clickSound.wav": "/Portfolio/static/media/clickSound.9ad255ca9ea69fce9ce7.wav",
     "index.html": "/Portfolio/index.html",
-    "main.7f277f3d.css.map": "/Portfolio/static/css/main.7f277f3d.css.map",
-    "main.11d1d781.js.map": "/Portfolio/static/js/main.11d1d781.js.map"
+    "main.c04dce59.css.map": "/Portfolio/static/css/main.c04dce59.css.map",
+    "main.c5a3154e.js.map": "/Portfolio/static/js/main.c5a3154e.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f277f3d.css",
-    "static/js/main.11d1d781.js"
+    "static/css/main.c04dce59.css",
+    "static/js/main.c5a3154e.js"
   ]
 }
